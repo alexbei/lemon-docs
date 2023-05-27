@@ -4,7 +4,7 @@
 
 <h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Lemon Docs (柠檬记账-项目资料)</h1>
 <h3 align="center">柠檬记账，让您的记账更简单、更高效、更有趣！</h3>
-<h5 align="center">Lemon Docs是一个全面的文档集，包括 Figma 原型、PowerDesigner 物理模型、初始化 SQL 脚本数据等</h5>
+<h5 align="center">Lemon Docs 是一个全面的文档集，包括 Figma 原型、PowerDesigner 物理模型、初始化 SQL 脚本数据等</h5>
 
 <p align="center">    
     <a><img src="https://img.shields.io/github/stars/alexbei/lemon-docs?style=social"></a>
