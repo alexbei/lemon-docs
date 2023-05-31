@@ -2,8 +2,8 @@
     <img src="https://raw.githubusercontent.com/alexbei/lemon-docs/main/images/logo/lemon-docs-logo-round.png" alt=logo" width="200" height="200" />
 </p>
 
-<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Lemon Docs (柠檬记账-项目资料)</h1>
-<h3 align="center">柠檬记账，让您的记账更简单、更高效、更有趣！</h3>
+<h1 align="center" style="margin: 30px 0 30px; font-weight: bold;">Lemon Docs</h1>
+<h3 align="center">柠檬记账-项目资料，让您的记账更简单、更高效、更有趣！</h3>
 <h5 align="center">Lemon Docs 是一个全面的文档集，包括 Figma 原型、PowerDesigner 物理模型、初始化 SQL 脚本数据等</h5>
 
 <p align="center">    
@@ -18,7 +18,7 @@
 
 ## 介绍
 
-**Lemon Docs** 项目资料是一个详尽的文档集，它展示了项目的设计、开发和部署的全过程。文档集中包含了 Figma 原型、PowerDesigner 物理模型、初始化 SQL 脚本数据等，让开发者和用户轻松了解和使用 Lemon Docs 这个的开源记账项目。
+**Lemon Docs** 是一个详尽的文档集，它展示了项目的设计、开发和部署的全过程。文档集中包含了 Figma 原型、PowerDesigner 物理模型、初始化 SQL 脚本数据等，让开发者和用户轻松了解和使用 Lemon Docs 这个的开源记账项目。
 
 
 
