@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      PostgreSQL 9.x                               */
-/* Created on:     2023/5/27 20:50:06                           */
+/* Created on:     2023/6/2 3:56:36                             */
 /*==============================================================*/
 
 
@@ -41,5 +41,39 @@ comment on column acct_type.create_time is
 '创建时间';
 
 comment on column acct_type.update_time is
+'更新时间';
+
+/*==============================================================*/
+/* Table: ledger_detail                                         */
+/*==============================================================*/
+create table ledger_detail (
+   id                   BIGSERIAL            not null,
+   acct_type_id         INT8                 not null,
+   amount               NUMERIC(72,18)       not null,
+   remark               VARCHAR(255)         null,
+   create_time          TIMESTAMP WITH TIME ZONE not null,
+   update_time          TIMESTAMP WITH TIME ZONE not null,
+   constraint PK_LEDGER_DETAIL primary key (id)
+);
+
+comment on table ledger_detail is
+'记账明细表';
+
+comment on column ledger_detail.id is
+'ID';
+
+comment on column ledger_detail.acct_type_id is
+'记账类型表 ID';
+
+comment on column ledger_detail.amount is
+'金额';
+
+comment on column ledger_detail.remark is
+'备注';
+
+comment on column ledger_detail.create_time is
+'创建时间';
+
+comment on column ledger_detail.update_time is
 '更新时间';
 
