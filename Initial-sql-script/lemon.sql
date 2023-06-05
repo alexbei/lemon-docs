@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      PostgreSQL 9.x                               */
-/* Created on:     2023/6/4 11:22:46                            */
+/* Created on:     2023/6/4 11:57:57                            */
 /*==============================================================*/
 
 
@@ -55,7 +55,8 @@ create table ledger_detail (
    year                 INT2                 not null,
    month                INT2                 not null,
    day                  INT2                 not null,
-   week                 INT2                 not null,
+   week_number          INT2                 not null,
+   week_day             INT2                 not null,
    date_number          INT4                 not null,
    create_time          TIMESTAMP WITH TIME ZONE not null,
    update_time          TIMESTAMP WITH TIME ZONE not null,
@@ -89,8 +90,11 @@ comment on column ledger_detail.month is
 comment on column ledger_detail.day is
 '创建时间 ( 冗余字段) [日]';
 
-comment on column ledger_detail.week is
-'创建时间 ( 冗余字段) [周]';
+comment on column ledger_detail.week_number is
+'创建时间 ( 冗余字段) [一年中的周数 ( 1-52 ) ]';
+
+comment on column ledger_detail.week_day is
+'创建时间 ( 冗余字段) [星期几 ( 1-7 ) ]';
 
 comment on column ledger_detail.date_number is
 '创建时间 ( 冗余字段) [年月日]';
