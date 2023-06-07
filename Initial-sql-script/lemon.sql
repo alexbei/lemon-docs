@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      PostgreSQL 9.x                               */
-/* Created on:     2023/6/4 11:57:57                            */
+/* Created on:     2023/6/8 4:12:15                             */
 /*==============================================================*/
 
 
@@ -52,15 +52,16 @@ create table ledger_detail (
    detail_type          INT2                 not null,
    amount               NUMERIC(72,18)       not null,
    remark               VARCHAR(255)         null,
-   year                 INT2                 not null,
-   month                INT2                 not null,
-   day                  INT2                 not null,
-   week_number          INT2                 not null,
-   week_day             INT2                 not null,
+   create_year          INT2                 not null,
+   create_month         INT2                 not null,
+   create_day           INT2                 not null,
+   create_week_number   INT2                 not null,
+   create_week_day      INT2                 not null,
    date_number          INT4                 not null,
    create_time          TIMESTAMP WITH TIME ZONE not null,
    update_time          TIMESTAMP WITH TIME ZONE not null,
-   constraint PK_LEDGER_DETAIL primary key (id)
+   constraint PK_LEDGER_DETAIL primary key (id),
+   constraint AK_KEY_2_LEDGER_D unique (create_week_day, date_number)
 );
 
 comment on table ledger_detail is
@@ -81,19 +82,19 @@ comment on column ledger_detail.amount is
 comment on column ledger_detail.remark is
 '备注';
 
-comment on column ledger_detail.year is
+comment on column ledger_detail.create_year is
 '创建时间 ( 冗余字段) [年]';
 
-comment on column ledger_detail.month is
+comment on column ledger_detail.create_month is
 '创建时间 ( 冗余字段) [月]';
 
-comment on column ledger_detail.day is
+comment on column ledger_detail.create_day is
 '创建时间 ( 冗余字段) [日]';
 
-comment on column ledger_detail.week_number is
-'创建时间 ( 冗余字段) [一年中的周数 ( 1-52 ) ]';
+comment on column ledger_detail.create_week_number is
+'创建时间 ( 冗余字段) [一年中的周数 ( 1-53 ) ]';
 
-comment on column ledger_detail.week_day is
+comment on column ledger_detail.create_week_day is
 '创建时间 ( 冗余字段) [星期几 ( 1-7 ) ]';
 
 comment on column ledger_detail.date_number is
